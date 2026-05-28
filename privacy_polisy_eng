@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Kookie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #F7F2EC;
+      --ink: #1A1814;
+      --ink-light: #8A847C;
+      --ink-faint: #ADA8A0;
+      --teal: #2D7A4F;
+      --teal-light: #E8F5EE;
+      --rule: #EBE5DC;
+      --max: 680px;
+    }
+
+    html { font-size: 17px; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      padding: 56px 24px 48px;
+      max-width: var(--max);
+      margin: 0 auto;
+      animation: fade-up 0.6s ease both;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .wordmark-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .wordmark-icon img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .wordmark-text {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      color: var(--ink);
+      letter-spacing: -0.3px;
+    }
+
+    .lang-switch {
+      font-size: 13px;
+      color: var(--teal);
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+
+    .lang-switch:hover { text-decoration: underline; }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 5vw, 38px);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: var(--ink-faint);
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px 96px;
+      animation: fade-up 0.6s 0.1s ease both;
+    }
+
+    /* ── Intro box ── */
+    .intro-box {
+      background: var(--teal-light);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin-bottom: 56px;
+      font-size: 15px;
+      color: var(--ink);
+    }
+
+    .intro-box strong {
+      font-weight: 500;
+      color: var(--teal);
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    section:last-child {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: -0.3px;
+      color: var(--ink);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .section-num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--teal);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      min-width: 24px;
+    }
+
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink);
+      margin: 28px 0 10px;
+      letter-spacing: 0.1px;
+    }
+
+    p {
+      color: var(--ink-light);
+      margin-bottom: 14px;
+      font-size: 16px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Lists ── */
+    ul {
+      list-style: none;
+      margin: 10px 0 14px;
+    }
+
+    ul li {
+      color: var(--ink-light);
+      font-size: 16px;
+      padding: 4px 0 4px 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      opacity: 0.5;
+    }
+
+    /* ── Processor cards ── */
+    .processor {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+
+    .processor-name {
+      font-weight: 500;
+      color: var(--ink);
+      font-size: 16px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .processor-name::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--teal);
+      flex-shrink: 0;
+    }
+
+    .processor p {
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .processor a {
+      color: var(--teal);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .processor a:hover { text-decoration: underline; }
+
+    .guarantee {
+      background: var(--teal-light);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 14px;
+      color: var(--ink);
+      margin-top: 10px;
+    }
+
+    .guarantee strong { color: var(--teal); font-weight: 500; }
+
+    /* ── Table ── */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 16px 0;
+      border-radius: 8px;
+      border: 1px solid var(--rule);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th {
+      background: #EDE7DF;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    td {
+      padding: 12px 16px;
+      color: var(--ink-light);
+      border-top: 1px solid var(--rule);
+      vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    /* ── Rights grid ── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .right-item {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 14px;
+    }
+
+    .right-item strong {
+      display: block;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+
+    .right-item span {
+      color: var(--ink-faint);
+      font-size: 13px;
+    }
+
+    /* ── No-collect grid ── */
+    .no-collect {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .tag {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-size: 13px;
+      color: var(--ink-light);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tag::before {
+      content: '×';
+      color: #ccc;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    /* ── Contact ── */
+    .contact-box {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .contact-box a {
+      color: var(--teal);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px 48px;
+      font-size: 13px;
+      color: var(--ink-faint);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      border-top: 1px solid var(--rule);
+      padding-top: 24px;
+    }
+
+    /* ── Animation ── */
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 480px) {
+      html { font-size: 16px; }
+      .rights-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="wordmark">
+      <div class="wordmark-icon">🍽️</div>
+      <span class="wordmark-text">Kookie</span>
+    </div>
+    <a href="index.html" class="lang-switch">🇵🇱 Polski</a>
+  </div>
+
+  <h1>Privacy<br><em>Policy</em></h1>
+  <p class="meta">Effective May 27, 2026</p>
+</header>
+
+<main>
+
+  <div class="intro-box">
+    <strong>Summary:</strong> Almost all data stays exclusively on your device. Only the URL recipe import feature sends page content to external services — and only when you explicitly trigger it. We do not collect personal data, display ads, or sell any data.
+  </div>
+
+  <!-- 1 -->
+  <section>
+    <h2><span class="section-num">01</span> General Information</h2>
+    <p>Kookie is a meal planning app for iOS, developed by Łukasz Chochel. This policy explains what data is processed when you use the app and for what purpose.</p>
+    <p>The developer does not display ads, does not sell user data, and does not share it with third parties for marketing purposes.</p>
+  </section>
+
+  <!-- 2 -->
+  <section>
+    <h2><span class="section-num">02</span> Data Stored Locally</h2>
+    <p>The app stores the following data exclusively on your device:</p>
+    <ul>
+      <li>recipes (name, ingredients, instructions, photos)</li>
+      <li>weekly meal plan</li>
+      <li>shopping list and checked item state</li>
+      <li>ingredient dictionary</li>
+      <li>app settings (theme, first day of the week)</li>
+      <li>tutorial state</li>
+    </ul>
+    <p>This data is never sent to external servers, is not synced to the cloud, and is not shared with third parties. Deleting the app permanently removes all data from your device.</p>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <h2><span class="section-num">03</span> Recipe Import from URL</h2>
+    <p>The URL recipe import feature is the only place where data leaves your device. Processing occurs only when you explicitly initiate the import by pasting a URL.</p>
+
+    <h3>What is transmitted</h3>
+    <ul>
+      <li>the URL you provide</li>
+      <li>the content of the webpage at that URL (recipe text)</li>
+    </ul>
+    <p>The app does not transmit any personal data: no name, email, location, or device identifiers.</p>
+
+    <h3>How processing works</h3>
+    <ul>
+      <li>The app sends the URL to an intermediary server.</li>
+      <li>The server fetches the page content directly from the website owner.</li>
+      <li>The content is passed to the Claude API (Anthropic) to extract the recipe data.</li>
+      <li>The parsed recipe is returned to the app and saved locally on your device.</li>
+    </ul>
+
+    <h3>Data processors</h3>
+
+    <div class="processor">
+      <div class="processor-name">Supabase — intermediary server infrastructure</div>
+      <p>Operator: Supabase Inc., USA. This app's server region: EU (Frankfurt, Germany).</p>
+      <p>What is logged: only technical metadata — timestamp, HTTP status, execution time, headers. The URL content and Claude's response are neither logged nor stored by Supabase.</p>
+      <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy →</a>
+    </div>
+
+    <div class="processor">
+      <div class="processor-name">Anthropic — text processing via the Claude model</div>
+      <p>Operator: Anthropic PBC, USA / Anthropic Ireland Limited, Ireland (for EEA users).</p>
+      <p>What is processed: the content of the webpage containing the recipe.</p>
+      <div class="guarantee">
+        <strong>Guarantee:</strong> under Anthropic's Commercial Terms of Service, data submitted via the API is not used to train AI models.
+      </div>
+      <br>
+      <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy →</a>
+    </div>
+
+    <h3>Import limit</h3>
+    <p>The app locally tracks the number of URL imports to enforce the free import limit. The counter is stored exclusively on your device.</p>
+  </section>
+
+  <!-- 4 -->
+  <section>
+    <h2><span class="section-num">04</span> What We Don't Collect</h2>
+    <p>The app does not collect or process:</p>
+    <div class="no-collect">
+      <span class="tag">name</span>
+      <span class="tag">email address</span>
+      <span class="tag">phone number</span>
+      <span class="tag">location</span>
+      <span class="tag">device identifiers</span>
+      <span class="tag">advertising identifiers</span>
+      <span class="tag">health data</span>
+      <span class="tag">biometric data</span>
+      <span class="tag">browsing history</span>
+      <span class="tag">data from other apps</span>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section>
+    <h2><span class="section-num">05</span> Legal Basis (GDPR)</h2>
+    <p>For users in the European Economic Area:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Processing activity</th>
+            <th>Legal basis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Storing data locally on the device</td>
+            <td>Performance of a contract (Art. 6(1)(b) GDPR) — data necessary for the app to function</td>
+          </tr>
+          <tr>
+            <td>Transmitting the URL and page content during recipe import</td>
+            <td>Performance of a contract (Art. 6(1)(b) GDPR) — feature intentionally initiated by the user</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section>
+    <h2><span class="section-num">06</span> International Data Transfers</h2>
+    <p>Data processed during recipe import may be transferred to the USA, where Supabase Inc. and Anthropic PBC are headquartered. Transfers are made on the basis of Standard Contractual Clauses (SCCs) approved by the European Commission or other appropriate safeguards in compliance with GDPR.</p>
+    <p>The server infrastructure used by this app is located in the EU region (Frankfurt, Germany).</p>
+  </section>
+
+  <!-- 7 -->
+  <section>
+    <h2><span class="section-num">07</span> Your Rights</h2>
+    <p>EEA users have the following rights under GDPR:</p>
+    <div class="rights-grid">
+      <div class="right-item"><strong>Access</strong><span>to your personal data</span></div>
+      <div class="right-item"><strong>Rectification</strong><span>of inaccurate data</span></div>
+      <div class="right-item"><strong>Erasure</strong><span>"right to be forgotten"</span></div>
+      <div class="right-item"><strong>Restriction</strong><span>of processing</span></div>
+      <div class="right-item"><strong>Portability</strong><span>of data to another controller</span></div>
+      <div class="right-item"><strong>Objection</strong><span>to processing</span></div>
+    </div>
+    <p>Since the app does not store user data on the developer's servers, most requests can be fulfilled directly by deleting data from your device or uninstalling the app.</p>
+    <p>You have the right to lodge a complaint with your local supervisory authority. In the EU, you may find your authority at <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener" style="color:var(--teal)">edpb.europa.eu</a>.</p>
+  </section>
+
+  <!-- 8 -->
+  <section>
+    <h2><span class="section-num">08</span> Security</h2>
+    <p>All communication between the app and the intermediary server takes place exclusively over an encrypted HTTPS connection. The developer applies appropriate technical and organizational measures to protect the data being processed.</p>
+  </section>
+
+  <!-- 9 -->
+  <section>
+    <h2><span class="section-num">09</span> Children</h2>
+    <p>The app is not directed at children under the age of 13 and the developer does not knowingly collect data from children in that age group.</p>
+  </section>
+
+  <!-- 10 -->
+  <section>
+    <h2><span class="section-num">10</span> Policy Changes</h2>
+    <p>The developer will notify users of material changes to this policy by updating the effective date on this page. Continued use of the app after changes are made constitutes acceptance of the updated policy.</p>
+  </section>
+
+  <!-- 11 -->
+  <section>
+    <h2><span class="section-num">11</span> Contact</h2>
+    <div class="contact-box">
+      <p><strong style="color:var(--ink)">Łukasz Chochel</strong><br>Developer of Kookie</p>
+      <br>
+      <p>📧 <a href="mailto:hello.kookielabs@gmail.com">hello.kookielabs@gmail.com</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>© 2026 Kookie — Łukasz Chochel</span>
+  <span>Effective May 27, 2026</span>
+</footer>
+
+</body>
+</html>
