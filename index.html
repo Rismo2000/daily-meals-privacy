@@ -408,7 +408,7 @@
 <main>
 
   <div class="intro-box">
-    <strong>Skrót:</strong> Prawie wszystkie dane pozostają wyłącznie na Twoim urządzeniu. Tylko funkcja importu przepisu z URL wysyła treść strony do zewnętrznych serwisów — i tylko wtedy, gdy samodzielnie ją uruchomisz. Nie zbieramy danych osobowych, nie wyświetlamy reklam i nie sprzedajemy żadnych danych.
+    <strong>Skrót:</strong> Prawie wszystkie dane pozostają wyłącznie na Twoim urządzeniu. Tylko funkcja importu przepisu z URL wysyła treść strony do zewnętrznych serwisów — i tylko wtedy, gdy samodzielnie ją uruchomisz. Aplikacja zbiera również anonimowe dane o sposobie używania przez PostHog (serwery EU); możesz zrezygnować w Ustawieniach. Nie zbieramy danych osobowych, nie wyświetlamy reklam i nie sprzedajemy żadnych danych.
   </div>
 
   <!-- 1 -->
@@ -479,7 +479,35 @@
 
   <!-- 4 -->
   <section>
-    <h2><span class="section-num">04</span> Czego nie zbieramy</h2>
+    <h2><span class="section-num">04</span> Analityka</h2>
+    <p>Aplikacja zbiera anonimowe dane o sposobie używania, aby zrozumieć jak jest używana i ją ulepszać. Nie są zbierane żadne dane osobowe, treści przepisów ani identyfikatory urządzenia.</p>
+
+    <h3>Co jest zbierane</h3>
+    <ul>
+      <li>uruchomienie aplikacji</li>
+      <li>dodanie posiłku do planu tygodniowego (tylko typ posiłku — bez treści przepisu)</li>
+      <li>otwarcie listy zakupów</li>
+      <li>zaznaczenie pozycji na liście zakupów</li>
+      <li>import przepisu z URL</li>
+      <li>ręczne stworzenie przepisu</li>
+    </ul>
+    <p>Zdarzenia są identyfikowane losowo wygenerowanym anonimowym ID, który nie może być powiązany z Twoją osobą.</p>
+
+    <h3>Podmiot przetwarzający dane</h3>
+    <div class="processor">
+      <div class="processor-name">PostHog — analityka produktowa</div>
+      <p>Operator: PostHog Inc., USA. Region serwera używany przez tę aplikację: EU Cloud (Frankfurt, Niemcy).</p>
+      <p>Dane są przetwarzane wyłącznie na serwerach w UE.</p>
+      <a href="https://posthog.com/privacy" target="_blank" rel="noopener">Polityka prywatności PostHog →</a>
+    </div>
+
+    <h3>Rezygnacja</h3>
+    <p>Możesz wyłączyć analitykę w dowolnym momencie w aplikacji: <strong>Ustawienia → Prywatność → Anonimowa analityka</strong>. Ustawienie działa natychmiast.</p>
+  </section>
+
+  <!-- 5 -->
+  <section>
+    <h2><span class="section-num">05</span> Czego nie zbieramy</h2>
     <p>Aplikacja nie zbiera ani nie przetwarza:</p>
     <div class="no-collect">
       <span class="tag">imię i nazwisko</span>
@@ -495,9 +523,9 @@
     </div>
   </section>
 
-  <!-- 5 -->
+  <!-- 6 -->
   <section>
-    <h2><span class="section-num">05</span> Podstawa prawna (RODO)</h2>
+    <h2><span class="section-num">06</span> Podstawa prawna (RODO)</h2>
     <p>Dla użytkowników z Europejskiego Obszaru Gospodarczego:</p>
     <div class="table-wrap">
       <table>
@@ -516,21 +544,25 @@
             <td>Przesyłanie adresu URL i treści strony przy imporcie przepisu</td>
             <td>Wykonanie umowy (art. 6 ust. 1 lit. b RODO) — funkcja inicjowana świadomie przez użytkownika</td>
           </tr>
+          <tr>
+            <td>Zbieranie anonimowych zdarzeń analitycznych przez PostHog</td>
+            <td>Zgoda (art. 6 ust. 1 lit. a RODO) — użytkownik wyraża zgodę podczas onboardingu; możliwe odwołanie w Ustawieniach → Prywatność</td>
+          </tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <!-- 6 -->
-  <section>
-    <h2><span class="section-num">06</span> Przekazywanie danych poza EOG</h2>
-    <p>Dane przetwarzane przy imporcie przepisu mogą być przekazywane do USA, gdzie mają siedzibę Supabase Inc. i Anthropic PBC. Przekazanie odbywa się na podstawie standardowych klauzul umownych (SCC) zatwierdzonych przez Komisję Europejską lub innych odpowiednich zabezpieczeń zgodnych z RODO.</p>
-    <p>Infrastruktura serwerowa używana przez tę aplikację jest zlokalizowana w regionie EU (Frankfurt, Niemcy).</p>
-  </section>
-
   <!-- 7 -->
   <section>
-    <h2><span class="section-num">07</span> Twoje prawa</h2>
+    <h2><span class="section-num">07</span> Przekazywanie danych poza EOG</h2>
+    <p>Dane przetwarzane przy imporcie przepisu oraz anonimowe zdarzenia analityczne mogą być przekazywane do USA, gdzie mają siedzibę Supabase Inc., Anthropic PBC i PostHog Inc. Przekazanie odbywa się na podstawie standardowych klauzul umownych (SCC) zatwierdzonych przez Komisję Europejską lub innych odpowiednich zabezpieczeń zgodnych z RODO.</p>
+    <p>Infrastruktura serwerowa używana przez tę aplikację (Supabase i PostHog) jest zlokalizowana w regionie EU (Frankfurt, Niemcy).</p>
+  </section>
+
+  <!-- 8 -->
+  <section>
+    <h2><span class="section-num">08</span> Twoje prawa</h2>
     <p>Użytkownicy z EOG mają na podstawie RODO następujące prawa:</p>
     <div class="rights-grid">
       <div class="right-item"><strong>Dostęp</strong><span>do danych osobowych</span></div>
@@ -544,27 +576,27 @@
     <p>Użytkownicy mają prawo złożyć skargę do organu nadzorczego. W Polsce jest nim <strong>Prezes UODO</strong>, ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl" style="color:var(--teal)">uodo.gov.pl</a>.</p>
   </section>
 
-  <!-- 8 -->
-  <section>
-    <h2><span class="section-num">08</span> Bezpieczeństwo</h2>
-    <p>Komunikacja między aplikacją a serwerem pośredniczącym odbywa się wyłącznie przez szyfrowane połączenie HTTPS. Deweloper stosuje odpowiednie środki techniczne i organizacyjne w celu ochrony przetwarzanych danych.</p>
-  </section>
-
   <!-- 9 -->
   <section>
-    <h2><span class="section-num">09</span> Dzieci</h2>
-    <p>Aplikacja nie jest skierowana do dzieci poniżej 13. roku życia i deweloper nie zbiera świadomie danych od dzieci w tym wieku.</p>
+    <h2><span class="section-num">09</span> Bezpieczeństwo</h2>
+    <p>Komunikacja między aplikacją a serwerem pośredniczącym odbywa się wyłącznie przez szyfrowane połączenie HTTPS. Deweloper stosuje odpowiednie środki techniczne i organizacyjne w celu ochrony przetwarzanych danych.</p>
   </section>
 
   <!-- 10 -->
   <section>
-    <h2><span class="section-num">10</span> Zmiany polityki</h2>
-    <p>O istotnych zmianach niniejszej polityki deweloper poinformuje przez aktualizację daty obowiązywania na tej stronie. Dalsze korzystanie z aplikacji po wprowadzeniu zmian oznacza ich akceptację.</p>
+    <h2><span class="section-num">10</span> Dzieci</h2>
+    <p>Aplikacja nie jest skierowana do dzieci poniżej 13. roku życia i deweloper nie zbiera świadomie danych od dzieci w tym wieku.</p>
   </section>
 
   <!-- 11 -->
   <section>
-    <h2><span class="section-num">11</span> Kontakt</h2>
+    <h2><span class="section-num">11</span> Zmiany polityki</h2>
+    <p>O istotnych zmianach niniejszej polityki deweloper poinformuje przez aktualizację daty obowiązywania na tej stronie. Dalsze korzystanie z aplikacji po wprowadzeniu zmian oznacza ich akceptację.</p>
+  </section>
+
+  <!-- 12 -->
+  <section>
+    <h2><span class="section-num">12</span> Kontakt</h2>
     <div class="contact-box">
       <p><strong style="color:var(--ink)">Łukasz Chochel</strong><br>Deweloper aplikacji Kookie</p>
       <br>
