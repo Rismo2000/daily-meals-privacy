@@ -1,2 +1,2 @@
-# daily-meals-privacy
-Privacy Policy for Daily Meals app
+# Kookie-privacy
+Privacy Policy for Kookie app
